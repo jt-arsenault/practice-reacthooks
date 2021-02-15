@@ -1,0 +1,1 @@
+// Contains links to the components and a login/logout button, based on the user's authentication state

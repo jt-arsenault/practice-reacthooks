@@ -1,0 +1,1 @@
+// Displays "Home" text
