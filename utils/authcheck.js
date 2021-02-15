@@ -1,0 +1,1 @@
+// Updates the authentication state of the user and retrieves the user's profile data and saves it to the global state. 

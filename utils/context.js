@@ -1,0 +1,1 @@
+// Context object, imported to every component that uses the useContext() hook

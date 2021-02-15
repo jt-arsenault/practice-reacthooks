@@ -1,0 +1,1 @@
+// A component that is only accessible to authenticated users
