@@ -13,14 +13,20 @@ import * as FormReducer from './store/reducers/form_reducer';
 
 import Auth from './utils/auth';
 
+// Initialize the Auth object defined in ./utils/auth.js
 const auth = new Auth();
 
 const ContextState = () => {
+
+    //==========================================================================================================//
+
     /*
         Plain Reducer
     */
 
-    
+    //==========================================================================================================//
+
+
     const [stateReducer1, dispatchReducer1] = useReducer(Reducer1.Reducer1, Reducer1.initialState);
 
     const handleDispatchTrue = () => {
@@ -36,9 +42,14 @@ const ContextState = () => {
         dispatchReducer1(ACTIONS.failure());
     }
 
+    //==========================================================================================================//
+
     /*
         Auth Reducer
     */
+
+    //==========================================================================================================//
+
 
     // Uses array destructuring to access the state and the dispatch
     const [stateAuthReducer, dispatchAuthReducer] = useReducer(AuthReducer, AuthReducer.initialState);
@@ -59,6 +70,9 @@ const ContextState = () => {
         dispatchAuthReducer(ACTIONS.remove_profile());
     }
 
+        //==========================================================================================================//
+
+
     /*
         Form Reducer
 
@@ -66,6 +80,9 @@ const ContextState = () => {
         and, if applicable, a payload
 
     */
+
+        //==========================================================================================================//
+
 
     // Get the 'state' and 'dispatch' from the useReducer() method
     const [stateFormReducer, dispatchFormReducer] = useReducer(FormReducer.FormReducer, FormReducer.initialState);
@@ -80,11 +97,18 @@ const ContextState = () => {
         dispatchFormReducer(ACTIONS.user_input_submit(event.target.useContext.value)); // JavaScript standard to access submitted text
     }
 
+    //==========================================================================================================//
+
+
     // Handle Authentication from callback
+
+
+    //==========================================================================================================//
+
 
     const handleAuthentication = (props) => {
         if(props.location.hash) {
-            auth.handleAuth();
+            auth.handleAuth();  // defined in ./utils/auth.js
         }
     }
 
