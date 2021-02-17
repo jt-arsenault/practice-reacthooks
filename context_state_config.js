@@ -141,7 +141,8 @@ const ContextState = () => {
                     handleAuth: (props) => handleAuthentication(props),
                     authObj: auth
                 }}>
-            <Routes />
+            <Routes /> 
+            {/* All routes are wrapped in the Context.Provider tag. This is how we achieve global state */}
         </Context.Provider>
         </div>
     )
